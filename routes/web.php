@@ -65,4 +65,4 @@ Route::resource('/admin/mendaftars', \App\Http\Controllers\MendaftarController::
 Route::get('/admin/updatealt/{id}', [\App\Http\Controllers\AlternatifController::class, 'updatealt']);
 Route::put('/admin/editalt/{id}', [\App\Http\Controllers\AlternatifController::class, 'editalt']);
 Route::POST('/admin/hapusalt/{id}', [\App\Http\Controllers\AlternatifController::class, 'hapusalt']);
-Route::resource('/admin/posts', \App\Http\Controllers\AlternatifController::class);
+Route::resource('/admin/alternatifs', \App\Http\Controllers\AlternatifController::class);

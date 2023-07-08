@@ -51,7 +51,7 @@
                 <h6 class="m-0 font-weight-bold text-primary">Alternatif</h6>
             </div>
             <div class="card-body">
-                <a href="/admin/posts/create" class="btn btn-primary mb-3">Tambah Data</a>
+                <a href="/admin/alternatifs/create" class="btn btn-primary mb-3">Tambah Data</a>
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
@@ -79,15 +79,9 @@
                                     <td>{{ $p->brand }}</td>
                                     <td>{{ $p->kesesuaian }}</td>
                                     <td>
-                                        <form action="/admin/hapusalt/{{ $p->id }}" onsubmit="return confirm('Apakah Anda Yakin ?');" method="GET">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger"><i
-                                                class="bi bi-trash"></i></button>
-                                        </form>
                                         <form onsubmit="return confirm('Apakah Anda Yakin ?');"
-                                            action="{{ route('posts.destroy', $p->id) }}" method="POST">
-                                            <a href="{{ route('posts.edit', $p->id) }}"
+                                            action="{{ route('alternatifs.destroy', $p->id) }}" method="POST">
+                                            <a href="{{ route('alternatifs.edit', $p->id) }}"
                                                 class="btn btn-sm btn-primary"><i class="bi bi-pencil-square"></i></a>
                                             @csrf
                                             @method('DELETE')
@@ -103,6 +97,7 @@
                             @endforelse
                         </tbody>
                     </table>
+                    {{-- {{ $posts->links() }} --}}
                 </div>
             </div><button type="submit" class="btn btn-danger mr-2" data-confirm-delete="true">
         </div>
