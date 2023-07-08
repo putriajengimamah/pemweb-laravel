@@ -42,7 +42,9 @@ Route::get('/admin', function () {
     return view('admin.index');
 });
 
-
+Route::get('/admin22', function () {
+    return view('admin.index');
+});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
